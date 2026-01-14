@@ -247,3 +247,13 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
     </div>
   );
 }
+{/* Info-Link zu Sanerio */}
+<div className="text-center mt-10">
+  <a
+    href="/ueber-sanerio"
+    className="text-sm text-slate-500 hover:text-slate-700 underline"
+  >
+    So funktioniert Sanerio
+  </a>
+</div>
+
