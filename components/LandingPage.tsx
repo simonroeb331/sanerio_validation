@@ -58,12 +58,12 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
     const newErrors: Record<string, string> = {};
     
     if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Bitte gÃ¼ltige E-Mail eingeben';
+      newErrors.email = 'Bitte gültige E-Mail eingeben';
     }
-    if (!formData.q1) newErrors.q1 = 'Bitte auswÃ¤hlen';
-    if (!formData.q2) newErrors.q2 = 'Bitte auswÃ¤hlen';
-    if (!formData.q3) newErrors.q3 = 'Bitte auswÃ¤hlen';
-    if (!formData.q4) newErrors.q4 = 'Bitte auswÃ¤hlen';
+    if (!formData.q1) newErrors.q1 = 'Bitte auswählen';
+    if (!formData.q2) newErrors.q2 = 'Bitte auswählen';
+    if (!formData.q3) newErrors.q3 = 'Bitte auswählen';
+    if (!formData.q4) newErrors.q4 = 'Bitte auswählen';
     if (!formData.consent) newErrors.consent = 'Zustimmung erforderlich';
     
     if (Object.keys(newErrors).length > 0) {
@@ -104,7 +104,7 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
           </div>
           <h2 className="text-2xl font-bold text-slate-800 mb-2">Vielen Dank!</h2>
           <p className="text-slate-600 mb-6">
-            Wir haben Ihr Interesse erhalten und melden uns in KÃ¼rze bei Ihnen.
+            Wir haben Ihr Interesse erhalten und melden uns in Kürze bei Ihnen.
           </p>
 
         </div>
@@ -123,8 +123,8 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
             <Icon className="w-12 h-12" />
             <h1 className="text-4xl md:text-5xl font-bold">Sanerio</h1>
           </div>
-          <p className="text-2xl md:text-3xl font-light mb-2">Das Parship fÃ¼r die Sanierung</p>
-          <p className="text-xl opacity-90">FÃ¼r {config.title}</p>
+          <p className="text-2xl md:text-3xl font-light mb-2">Das Parship für die Sanierung</p>
+          <p className="text-xl opacity-90">Für {config.title}</p>
         </div>
       </div>
 
@@ -144,7 +144,7 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
 
         {/* Solution */}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <h2 className="text-2xl font-bold text-slate-800 mb-6">Die LÃ¶sung mit Sanerio</h2>
+          <h2 className="text-2xl font-bold text-slate-800 mb-6">Die Lösung mit Sanerio</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {config.benefits.map((benefit, i) => {
               const BenefitIcon = iconMap[benefit.icon as keyof typeof iconMap];
@@ -259,5 +259,9 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
     </div>
   );
 }
+
+
+
+
 
 
