@@ -1,6 +1,9 @@
-﻿import React from "react";
+﻿"use client";
+
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import {
   Info,
   Users,
@@ -17,6 +20,18 @@ import {
 } from "lucide-react";
 
 export default function AboutPage() {
+  const searchParams = useSearchParams();
+  const from = searchParams.get("from");
+
+  const backHref =
+    from === "eigentuemer"
+      ? "/eigentuemer"
+      : from === "energieberater"
+      ? "/energieberater"
+      : from === "handwerker"
+      ? "/handwerker"
+      : "/";
+
   const steps = [
     {
       title: "1) Bedarf erfassen",
@@ -69,8 +84,8 @@ export default function AboutPage() {
           </p>
 
           <div className="mt-6">
-            <Link href="/" className="underline text-white/90 hover:text-white">
-              Zurück zur Startseite
+            <Link href={backHref} className="underline text-white/90 hover:text-white">
+              Zurück
             </Link>
           </div>
         </div>
@@ -180,7 +195,7 @@ export default function AboutPage() {
         <div className="bg-white rounded-2xl shadow-lg p-8">
           <h2 className="text-2xl font-bold text-slate-800 mb-4">Kooperation & Planung: Sanierungssprints</h2>
           <p className="text-slate-700 mb-4">
-            Viele Sanierungen scheitern nicht an der Motivation, sondern an Reibungsverlusten: unklare Daten, fehlende Reihenfolge,
+            Viele Sanierungen scheitern nicht an Reibungsverlusten: unklare Daten, fehlende Reihenfolge,
             lange Wartezeiten, falsche Erwartungen. Sanerio setzt hier an – mit strukturierter Planung und projektbezogener Zusammenarbeit.
           </p>
 
