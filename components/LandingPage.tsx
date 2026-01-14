@@ -106,6 +106,16 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
           <p className="text-slate-600 mb-6">
             Wir haben Ihr Interesse erhalten und melden uns in Kürze bei Ihnen.
           </p>
+{/* Info-Link zu Sanerio */}
+<div className="text-center mt-10">
+  <a
+    href="/ueber-sanerio"
+    className="text-sm text-slate-500 hover:text-slate-700 underline"
+  >
+    So funktioniert Sanerio
+  </a>
+</div>
+
         </div>
       </div>
     );
@@ -247,13 +257,4 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
     </div>
   );
 }
-{/* Info-Link zu Sanerio */}
-<div className="text-center mt-10">
-  <a
-    href="/ueber-sanerio"
-    className="text-sm text-slate-500 hover:text-slate-700 underline"
-  >
-    So funktioniert Sanerio
-  </a>
-</div>
 
