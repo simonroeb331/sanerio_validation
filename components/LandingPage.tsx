@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { Home, Users, Zap, CheckCircle, Building, Lightbulb, Wrench, TrendingUp, Clock, Shield } from 'lucide-react';
 import { targetGroups, TargetGroup } from '../lib/config';
+import Link from "next/link";
+
 
 
 const iconMap = {
@@ -117,16 +119,29 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       {/* Hero */}
-      <div className={`${colors.primary} text-white py-20`}>
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-4">
-            <Icon className="w-12 h-12" />
-            <h1 className="text-4xl md:text-5xl font-bold">Sanerio</h1>
-          </div>
-          <p className="text-2xl md:text-3xl font-light mb-2">Das Parship für die Sanierung</p>
-          <p className="text-xl opacity-90">Für {config.title}</p>
-        </div>
-      </div>
+<div className={`relative ${colors.primary} text-white pt-20 pb-28`}>
+  <div className="max-w-4xl mx-auto px-4">
+    <div className="flex items-center gap-3 mb-4">
+      <Icon className="w-12 h-12" />
+      <h1 className="text-4xl md:text-5xl font-bold">Sanerio</h1>
+    </div>
+    <p className="text-2xl md:text-3xl font-light mb-2">
+      Das Parship für die Sanierung
+    </p>
+    <p className="text-xl opacity-90">Für {config.title}</p>
+  </div>
+
+  {/* Link unten mittig im grünen Feld */}
+  <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
+    <Link
+      href={`/ueber-sanerio?from=${encodeURIComponent(targetGroup)}`}
+      className="text-sm underline underline-offset-4 opacity-90 hover:opacity-100"
+    >
+      Wie funktioniert Sanerio?
+    </Link>
+  </div>
+</div>
+
 
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Pain Points */}
