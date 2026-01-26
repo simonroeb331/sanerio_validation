@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
 import { Home, Users, Zap, CheckCircle, Building, Lightbulb, Wrench, TrendingUp, Clock, Shield } from 'lucide-react';
@@ -37,7 +37,8 @@ const colorClasses = {
 
 export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup }) {
   const config = targetGroups[targetGroup];
-  const colors = colorClasses[config.color];
+  const colors = colorClasses[config.color as keyof typeof colorClasses];
+
   
   const [formData, setFormData] = useState({
     email: '',
@@ -106,7 +107,6 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
           <p className="text-slate-600 mb-6">
             Wir haben Ihr Interesse erhalten und melden uns in Kürze bei Ihnen.
           </p>
-
         </div>
       </div>
     );
@@ -133,7 +133,8 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-slate-800 mb-6">Kennen Sie das?</h2>
           <div className="space-y-3">
-            {config.painPoints.map((point, i) => (
+            {config.painPoints.map((point: string, i: number) => (
+
               <div key={i} className="flex items-start gap-3">
                 <div className={`w-2 h-2 ${colors.primary} rounded-full mt-2 flex-shrink-0`} />
                 <p className="text-slate-700">{point}</p>
@@ -146,7 +147,8 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
           <h2 className="text-2xl font-bold text-slate-800 mb-6">Die Lösung mit Sanerio</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {config.benefits.map((benefit, i) => {
+            {config.benefits.map((benefit: { text: string; icon: string }, i: number) => {
+
               const BenefitIcon = iconMap[benefit.icon as keyof typeof iconMap];
               return (
                 <div key={i} className={`${colors.light} rounded-xl p-6 text-center`}>
@@ -173,20 +175,22 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData({...formData, email: e.target.value})}
-                className={`w-full px-4 py-2 border ${errors.email ? 'border-red-500' : 'border-slate-300'} rounded-lg ${colors.ring} focus:border-transparent outline-none`}
+                className={`w-full px-4 py-2 border ${errors.email ? 'border-red-500' : 'border-slate-300'} rounded-lg !text-slate-900 placeholder:text-slate-400 ${colors.ring} focus:border-transparent outline-none`}
                 placeholder="ihre@email.de"
               />
               {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
 
             {/* Questions */}
-            {config.questions.map((question, qIndex) => (
+            {config.questions.map((question: { q: string; options: string[] }, qIndex: number) => (
+
               <div key={qIndex}>
                 <label className="block text-sm font-medium text-slate-700 mb-3">
                   {question.q} *
                 </label>
                 <div className="space-y-2">
-                  {question.options.map((option) => (
+                  {question.options.map((option: string) => (
+
                     <label key={option} className="flex items-center gap-3 cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition">
                       <input
                         type="radio"
@@ -212,7 +216,7 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
               <textarea
                 value={formData.note}
                 onChange={(e) => setFormData({...formData, note: e.target.value})}
-                className={`w-full px-4 py-2 border border-slate-300 rounded-lg ${colors.ring} focus:border-transparent outline-none`}
+                className={`w-full px-4 py-2 border border-slate-300 rounded-lg !text-slate-900 placeholder:text-slate-400 ${colors.ring} focus:border-transparent outline-none`}
                 rows={3}
                 placeholder="Weitere Anmerkungen..."
               />
@@ -244,24 +248,7 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
             </button>
           </div>
         </div>
-
-{/* Info-Link zu Sanerio */}
-<div className="text-center mt-10">
-  <a
-    href={`/ueber-sanerio?from=${targetGroup}`}
-    className="text-sm text-slate-500 hover:text-slate-700 underline"
-  >
-    So funktioniert Sanerio
-  </a>
-</div>
-
       </div>
     </div>
   );
 }
-
-
-
-
-
-

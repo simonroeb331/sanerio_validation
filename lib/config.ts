@@ -3,11 +3,12 @@ export const targetGroups = {
     title: 'Eigentümer',
     color: 'green',
     painPoints: [
-      'Sie wissen nicht, wo Sie anfangen sollen?',
-      'Handwerker sind überlastet oder nicht erreichbar?',
+      'Sie möchten energetisch sanierung und suchen passende Energieberater',
+      'Sie haben einen Sanierungsfahrplan (iSFP), wissen aber nicht, welche Maßnahmen bei begrenztem Budget zuerst sinnvoll sind und das beste Kosten-Nutzen-Verhältnis bieten?',
+      'Handwerker sind überlastet oder nicht erreichbar? - Planung der Sanierung ist kompliziert oder mit externen Partnern sehr teuer',
       'Die Förderanträge verwirren Sie?',
       'Sie fürchten versteckte Kosten und Verzögerungen?',
-      'Koordination zwischen Gewerken ist ein Albtraum?'
+      'Die Koordination zwischen Gewerken ist ein Albtraum?'
     ],
     benefits: [
       { text: 'Qualifizierte Partner an einem Ort', icon: 'users' },
@@ -25,10 +26,10 @@ export const targetGroups = {
     title: 'Energieberater',
     color: 'blue',
     painPoints: [
-      'Ihr iSFP landet oft in der Schublade?',
-      'Sie haben keine Zeit für Umsetzungsbegleitung?',
-      'Kunden finden keine Handwerker?',
-      'Folgeaufträge bleiben aus?'
+      'Unseriöse Anbieter oder Billiglösungen greifen Aufträge ab und gefährden die Umsetzung des "Bestmöglich-Prinzips"?',
+      'Ihr iSFP landet nach der Übagabe häufig in der Schublade?',
+      'Ihnen fehlt die Zeit oder die Möglichkeit, Ihre Kunden bei der Umsetzung weiter zu begleiten?',
+      'Folgeaufträge bleiben aus, obwohl Sie Ihre Kunden gerne weiter betreuen würden, um den klimaneutralen Gebäudebestand zu fördern?'
     ],
     benefits: [
       { text: 'Höhere Umsetzungsquote Ihrer Konzepte', icon: 'trending-up' },
@@ -46,16 +47,17 @@ export const targetGroups = {
     title: 'Handwerker',
     color: 'orange',
     painPoints: [
-      'Zu viele Kleinstaufträge, zu wenig Plan?',
-      'Auftragsakquise frisst Ihre Zeit?',
-      'Abstimmung mit anderen Gewerken ist mühsam?',
-      'Sie wünschen sich planbare Großprojekte?',
-      'Kunden sind oft schlecht vorbereitet?'
+      'Zu viele Kleinstaufträge, aber keine klare Sanierungsplanung?',
+      'Auftragsakquise - u.a. für geeigneter Sanierungsprojekte - frisst Ihre Zeit?',
+      'Die Abstimmung mit Energieberatern und anderen Gewerken ist aufwendig?',
+      'Sie wünschen sich besser planbare, größere Sanierungsprojekte, durch die Kosten- und Zeitaufwand reduziert werden könnten?',
+      'Kunden sind für komplexe Sanierungsmaßnahmen oft unzureichend vorbereitet?',
+      'Ein vorhandener iSFP wird in der Umsetzung häufig nicht genutzt, sodass Aufmaß und Planung erneut erfolgen müssen?'
     ],
     benefits: [
       { text: 'Zugang zu vorqualifizierten Projekten', icon: 'building' },
-      { text: 'Zusammenarbeit mit anderen Gewerken', icon: 'users' },
-      { text: 'Weniger Akquise, mehr Bauzeit', icon: 'clock' }
+      { text: 'Einfachere Zusammenarbeit mit anderen Gewerken', icon: 'users' },
+      { text: 'Weniger Akquise, mehr aktive Bauzeit', icon: 'clock' }
     ],
     questions: [
       { q: 'Welche Art Projekte wünschen Sie sich?', options: ['Einzelmaßnahmen', 'Komplettsanierung', 'Seriell/standardisiert', 'Egal, Hauptsache planbar'] },
