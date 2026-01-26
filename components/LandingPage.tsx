@@ -182,7 +182,8 @@ export default function LandingPage({ targetGroup }: { targetGroup: TargetGroup 
             </div>
 
             {/* Questions */}
-            {config.questions.map((question: { q: string; options: string[] }, qIndex: number) => (
+            {config.questions.map((question: { q: string; options: readonly string[] }, qIndex: number) => (
+
 
               <div key={qIndex}>
                 <label className="block text-sm font-medium text-slate-700 mb-3">
