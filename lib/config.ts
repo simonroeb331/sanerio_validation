@@ -3,7 +3,7 @@ export const targetGroups = {
     title: 'Eigentümer',
     color: 'green',
     painPoints: [
-      'Sie möchten energetisch sanierung und suchen passende Energieberater',
+      'Sie möchten energetisch sanieren und suchen passende Energieberater',
       'Sie haben einen Sanierungsfahrplan (iSFP), wissen aber nicht, welche Maßnahmen bei begrenztem Budget zuerst sinnvoll sind und das beste Kosten-Nutzen-Verhältnis bieten?',
       'Handwerker sind überlastet oder nicht erreichbar? - Planung der Sanierung ist kompliziert oder mit externen Partnern sehr teuer',
       'Die Förderanträge verwirren Sie?',
