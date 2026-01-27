@@ -225,7 +225,7 @@ export default function AboutPage() {
               </div>
               <ul className="text-sm text-slate-700 space-y-2">
                 <li>• Sehen auf einen Blick fertig vorbereitete Sanierungspakete mit klaren Gewerken, Timing und Abhängigkeiten</li>
-                <li>• Bewerben sich gezielt auf passende Projekte („Cherry Picking")</li>
+                <li>• Bewerben sich gezielt auf passende Projekte, statt unqualifizierte Anfragen zu bearbeiten („Cherry Picking")</li>
                 <li>• Nutzen lokale Cluster: mehrere Sanierungen in derselben Region ermöglichen bessere Planung von Zeit und Material</li>
               </ul>
             </div>
